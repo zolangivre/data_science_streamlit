@@ -1,1 +1,1 @@
-web: streamlit run nom_de_votre_script.py --server.port=$PORT --server.enableCORS=false
+web: streamlit run Accueuil.py --server.port=$PORT --server.enableCORS=false
