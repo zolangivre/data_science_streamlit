@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "france_grid",
+"features": [
+{ "type": "Feature", "properties": { "data": 0.00093689601770418967 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -5.0, 41.0 ], [ 0.0, 41.0 ], [ 0.0, 46.0 ], [ -5.0, 46.0 ], [ -5.0, 41.0 ] ] ] } },
+{ "type": "Feature", "properties": { "data": 0.001255583190752088 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 0.0, 41.0 ], [ 5.0, 41.0 ], [ 5.0, 46.0 ], [ 0.0, 46.0 ], [ 0.0, 41.0 ] ] ] } },
+{ "type": "Feature", "properties": { "data": 0.0013853127009643314 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 5.0, 41.0 ], [ 10.0, 41.0 ], [ 10.0, 46.0 ], [ 5.0, 46.0 ], [ 5.0, 41.0 ] ] ] } },
+{ "type": "Feature", "properties": { "data": 0.0011501243356120297 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -5.0, 46.0 ], [ 0.0, 46.0 ], [ 0.0, 51.0 ], [ -5.0, 51.0 ], [ -5.0, 46.0 ] ] ] } },
+{ "type": "Feature", "properties": { "data": 0.0012559941755450194 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 0.0, 46.0 ], [ 5.0, 46.0 ], [ 5.0, 51.0 ], [ 0.0, 51.0 ], [ 0.0, 46.0 ] ] ] } },
+{ "type": "Feature", "properties": { "data": 0.00099405071433714045 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 5.0, 46.0 ], [ 10.0, 46.0 ], [ 10.0, 51.0 ], [ 5.0, 51.0 ], [ 5.0, 46.0 ] ] ] } },
+{ "type": "Feature", "properties": { "data": 0.00084168094604551832 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 0.0, 51.0 ], [ 5.0, 51.0 ], [ 5.0, 56.0 ], [ 0.0, 56.0 ], [ 0.0, 51.0 ] ] ] } }
+]
+}
