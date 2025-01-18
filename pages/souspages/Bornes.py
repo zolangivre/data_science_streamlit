@@ -1,5 +1,5 @@
-
 import streamlit as st
+import os
 
 def app():
     st.write("Carte des Bornes")
@@ -8,8 +8,8 @@ def app():
     selected_year = st.slider("Sélectionnez l'année :", min_value=2000, max_value=2025, step=1)
 
     # Génération dynamique du chemin de la carte HTML
-    file_path = f"../script/map/cartes_bornes/carte_{selected_year}.0.html"
-
+    base_path = os.path.abspath(os.path.dirname(__file__))
+    file_path = os.path.join(base_path, f'../../script/map/cartes_bornes/carte_{selected_year}.0.html')
     # Chargement de la carte HTML sélectionnée
     try:
         with open(file_path, 'r', encoding='utf-8') as f:

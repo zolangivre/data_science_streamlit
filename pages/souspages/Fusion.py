@@ -1,5 +1,5 @@
-
 import streamlit as st
+import os
 
 def app():
     st.write("Double cartes")
@@ -7,8 +7,9 @@ def app():
     # Slider pour sélectionner l'année
     selected_year = st.slider("Sélectionnez l'année :", min_value=2020, max_value=2024, step=1)
 
-    # Génération dynamique du chemin de la carte HTML
-    file_path2 = f"../script/map/cartes_immatr/immatr_map_{selected_year}.html"
+    # Définir le chemin de base
+    base_path = os.path.abspath(os.path.dirname(__file__))
+
     col1, col2 = st.columns(2)
 
     try:
@@ -18,19 +19,18 @@ def app():
                 ["Immatriculation", "Bornes", "Flux routiers", "Population"]
             )
 
-            if(menu == "Immatriculation") :
-                file_path2 = f"../script/map/cartes_immatr/immatr_map_{selected_year}.html"
+            if menu == "Immatriculation":
+                file_path2 = os.path.join(base_path, f"../../script/map/cartes_immatr/immatr_map_{selected_year}.html")
                 st.subheader("Carte des Immatriculations")
-            elif(menu == "Bornes") :
-                file_path2 = f"../script/map/cartes_bornes/carte_{selected_year}.0.html"
+            elif menu == "Bornes":
+                file_path2 = os.path.join(base_path, f"../../script/map/cartes_bornes/carte_{selected_year}.0.html")
                 st.subheader("Carte des Bornes")
-            elif(menu == "Flux routiers") :
-                file_path2 = f"../script/map/carte_lignes_trafic.html"
+            elif menu == "Flux routiers":
+                file_path2 = os.path.join(base_path, f"../../script/map/carte_lignes_trafic.html")
                 st.subheader("Carte du trafic")
-            else :
-                file_path2 = f"../script/map/cartes/heatmap_population.html"
+            else:
+                file_path2 = os.path.join(base_path, f"../../script/map/cartes/heatmap_population.html")
                 st.subheader("Carte de la population")
-            
 
             # Chargement de la première carte
             with open(file_path2, 'r', encoding='utf-8') as f:
@@ -44,20 +44,20 @@ def app():
                 ["Immatriculation", "Bornes", "Flux routiers", "Population"]
             )
 
-            if(menu2 == "Immatriculation") :
-                file_path2 = f"../script/map/cartes_immatr/immatr_map_{selected_year}.html"
+            if menu2 == "Immatriculation":
+                file_path2 = os.path.join(base_path, f"../../script/map/cartes_immatr/immatr_map_{selected_year}.html")
                 st.subheader("Carte des Immatriculations")
-            elif(menu2 == "Bornes") :
-                file_path2 = f"../script/map/cartes_bornes/carte_{selected_year}.0.html"
+            elif menu2 == "Bornes":
+                file_path2 = os.path.join(base_path, f"../../script/map/cartes_bornes/carte_{selected_year}.0.html")
                 st.subheader("Carte des Bornes")
-            elif(menu2 == "Flux routiers") :
-                file_path2 = f"../script/map/carte_lignes_trafic.html"
+            elif menu2 == "Flux routiers":
+                file_path2 = os.path.join(base_path, f"../../script/map/carte_lignes_trafic.html")
                 st.subheader("Carte du trafic")
-            else :
-                file_path2 = f"../script/map/cartes/heatmap_population.html"
+            else:
+                file_path2 = os.path.join(base_path, f"../../script/map/cartes/heatmap_population.html")
                 st.subheader("Carte de la population")
 
-            # Chargement de la première carte
+            # Chargement de la deuxième carte
             with open(file_path2, 'r', encoding='utf-8') as f:
                 html_content1 = f.read()
 
