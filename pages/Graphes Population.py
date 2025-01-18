@@ -1,13 +1,18 @@
 import pandas as pd
 import streamlit as st
-
+import os
 import matplotlib.pyplot as plt
 
-# Charger les données CSV
-data = pd.read_csv('../data/processed/pop_prediction.csv')
-cities = pd.read_csv('../data/cities.csv')
-pop = pd.read_csv('../data/filtered_cities_population.csv')
+# Définir le chemin absolu
+base_path = os.path.abspath(os.path.dirname(__file__))
+data_path = os.path.join(base_path, '../data/processed/pop_prediction.csv')
+cities_path = os.path.join(base_path, '../data/cities.csv')
+pop_path = os.path.join(base_path, '../data/filtered_cities_population.csv')
 
+# Charger les données CSV
+data = pd.read_csv(data_path)
+cities = pd.read_csv(cities_path)
+pop = pd.read_csv(pop_path)
 
 pouilloux = [46.604876131,4.35310787]
 vif = [45.04313947,5.674134613]

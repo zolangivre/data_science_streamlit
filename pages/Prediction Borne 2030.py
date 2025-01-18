@@ -5,6 +5,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
+import os
 
 # Configure Streamlit
 st.set_page_config(page_title="Régression du nombre de bornes", layout="wide")
@@ -14,7 +15,8 @@ st.title("Analyse et Régression du Nombre de Bornes par Année")
 
 st.write("Objectif pour 2030 : 400 000 bornes en france")
 
-file_path = "../data/processed/grouped_borne.csv"
+base_path = os.path.abspath(os.path.dirname(__file__))
+file_path = os.path.join(base_path, '../data/processed/grouped_borne.csv')
 
 if file_path:
     # Lecture du CSV
